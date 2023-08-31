@@ -1,7 +1,12 @@
+import Layout from "./Layouts";
+import TabComponent from "./TabComponent";
+
 function Programacion(){
 
     return(
-        <h1>Programacion</h1>
+        <Layout>
+            <TabComponent />
+        </Layout>
     );
 }
 
