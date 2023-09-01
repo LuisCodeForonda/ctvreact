@@ -30,21 +30,20 @@ function Navigation() {
                         className="text-center rounded-full transition hover:scale-110 duration-300"><img src={Tiktok} alt="" width={36} /></a>
                 </ul>
 
-                <ul id="menu"
-                    className={'block w-full h-56 flex flex-col justify-evenly gap-1 md:gap-4 hidden md:w-auto md:h-auto md:block md:order-1 md:flex md:flex-row text-xl'}>
+                <ul id="menu" className={`block w-full h-56 flex flex-col justify-evenly gap-1 md:gap-4 md:w-auto md:h-auto md:block md:order-1 md:flex md:flex-row text-xl ${isOpen ? 'hidden' : 'block'}`}>
                     <li>
-                        <Link to="/quienessomos" className="menu_item text-slate-400 hover:text-slate-50 {{ request()->routeIs('quienessomos') ? 'text-slate-50 font-medium' : '' }}">Quienes
+                        <Link to="/quienessomos" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('quienessomos') ? 'text-slate-50 font-medium' : '' }}">Quienes
                             somos
                         </Link>
                     </li>
                     <li>
-                        <Link to="/programacion" className="menu_item text-slate-400 hover:text-slate-50 {{ request()->routeIs('programacion') ? 'text-slate-50 font-medium' : '' }}">Programación</Link>
+                        <Link to="/programacion" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('programacion') ? 'text-slate-50 font-medium' : '' }}">Programación</Link>
                     </li>
                     <li>
-                        <Link to="/programas" className="menu_item text-slate-400 hover:text-slate-50 {{ request()->routeIs('programas') ? 'text-slate-50 font-medium' : '' }}">Programas</Link>
+                        <Link to="/programas" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('programas') ? 'text-slate-50 font-medium' : '' }}">Programas</Link>
                     </li>
                     <li>
-                        <Link to="/contactos" className="menu_item text-slate-400 hover:text-slate-50 {{ request()->routeIs('contactos') ? 'text-slate-50 font-medium' : '' }}">Contactos</Link>
+                        <Link to="/contactos" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('contactos') ? 'text-slate-50 font-medium' : '' }}">Contactos</Link>
 
                     </li>
                 </ul>

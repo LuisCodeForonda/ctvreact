@@ -1,6 +1,12 @@
+import React, {useEffect} from "react";
 import Layout from "./Layouts";
 
 function Contactos() {
+
+    useEffect(() => {
+        document.title = 'CTV Bolivia - contactos';
+    }, []);
+
     return (
         <Layout>
             <div className="p-4">

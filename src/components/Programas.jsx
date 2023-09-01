@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "./Layouts";
 
 function Programas() {
 
     const [activeTab, setActiveTab] = useState(0);
 
-  const tabs = [
-    { label: 'Noticieros', content: 'kdjhfejf'},
-    { label: 'Analisis', content: 'Contenido de la pestaña 2' },
-    { label: 'Familiares', content: 'Contenido de la pestaña 3' },
-    { label: 'Entretenimiento', content: 'Contenido de la pestaña 3' },
-  ];
+    const tabs = [
+        { label: 'Noticieros', content: '' },
+        { label: 'Analisis', content: '' },
+        { label: 'Familiares', content: '' },
+        { label: 'Entretenimiento', content: '' },
+    ];
+
+    useEffect(() => {
+        document.title = 'CTV Bolivia - programas';
+    }, []);
+
     return (
         <Layout>
             <div className="p-4">
@@ -21,8 +26,8 @@ function Programas() {
                             <button
                                 key={index}
                                 className={`${index === activeTab
-                                        ? 'bg-neutral-900'
-                                        : 'bg-neutral-600'
+                                    ? 'bg-neutral-900'
+                                    : 'bg-neutral-600'
                                     } grow text-center cursor-pointer p-2 hover:bg-neutral-800 bg-neutral-600`}
                                 onClick={() => setActiveTab(index)}
                             >

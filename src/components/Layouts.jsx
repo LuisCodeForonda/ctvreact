@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Header from './Header';
 import Navigation from "./Navigation";
 import Miniatura from './Miniatura';
+import Counter from './Counter';
+
 import dxtvlogo from './../assets/DxtvLogo.jpg'
 import protalogo from './../assets/ProtaLogo.jpg'
 
@@ -45,8 +47,7 @@ function Layout({ children }) {
           <div className=" bg-gray-200 shadow-xl lg:m-4">
             <h2 className="inline-block text-xl bg-red-700 text-white px-4 rounded"><i
               className="fa-solid fa-circle-play mr-2"></i>Live</h2>
-            <iframe src="" width="100%" height="360"
-            ></iframe>
+            <Counter />
           </div>
 
           <div className="flex flex-col gap-2 m-4 p-4 shadow-xl rounded-xl overflow-hidden">
