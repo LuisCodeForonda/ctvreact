@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
+import {} from 'react-'
 import Header from './Header';
 import Navigation from "./Navigation";
 import Miniatura from './Miniatura';
 import Counter from './Counter';
+import Footer from './Footer';
 
 import dxtvlogo from './../assets/DxtvLogo.jpg'
 import protalogo from './../assets/ProtaLogo.jpg'
 
 //logos 
-import Facebook from '../assets/bxl-facebook-circle.svg'
-import Youtube from '../assets/bxl-youtube.svg'
-import Twitter from '../assets/bxl-twitter.svg'
-import Tiktok from '../assets/bxl-tiktok.svg'
+import Facebook from '../assets/bxl-facebook-black.svg'
+import Youtube from '../assets/bxl-youtube-black.svg'
+import Twitter from '../assets/bxl-twitter-black.svg'
+import Tiktok from '../assets/bxl-tiktok-black.svg'
 
 //titulos
 
@@ -60,47 +62,7 @@ function Layout({ children }) {
       </main>
 
       {/* Puedes incluir el pie de página u otros elementos comunes aquí */}
-      <footer className="bg-slate-200 text-gray-900">
-        <div className="container max-w-screen-xl mx-auto grid gap-4 grid-cols-1 md:grid-cols-3 md:justify-items-center md:h-54 p-4">
-          <div className="">
-            <h3 className="font-bold text-lg sm:text-xl mb-2">Redes sociales</h3>
-            <a href="https://www.facebook.com/CTVLaPaz" target="_blank" rel="noopener noreferrer"
-              className="block text-sm sm:text-base hover:text-red-700">Facebook</a>
-            <a href="https://www.youtube.com/@ctvbolivia" target="_blank" rel="noopener noreferrer"
-              className="block text-sm sm:text-base hover:text-red-700">You
-              tube</a>
-            <a href="https://twitter.com/CTV_Bolivia" target="_blank" rel="noopener noreferrer"
-              className="block text-sm sm:text-base hover:text-red-700">Twitter</a>
-            <a href="https://www.tiktok.com/@ctvbolivia" target="_blank" rel="noopener noreferrer"
-              className="block text-sm sm:text-base hover:text-red-700">Tik
-              tok</a>
-          </div>
-          <div className="">
-            <h3 className="font-bold text-lg sm:text-xl mb-2">Correos</h3>
-
-            <h3 className="font-bold text-sm">Contabilidad</h3>
-            <p className="mb-2 text-xs sm:text-base"> contabilidad@ctvbolivia.com</p>
-
-            <h3 className="font-bold text-sm">Área producción</h3>
-            <p className="mb-2 text-xs sm:text-base"> produccion@ctvbolivia.com</p>
-
-            <h3 className="font-bold text-sm">Área programación</h3>
-            <p className="mb-2 text-xs sm:text-base"> programacion@ctvbolivia.com</p>
-
-            <h3 className="font-bold text-sm">Área prensa</h3>
-            <p className="mb-2 text-xs sm:text-base"> prensa@ctvbolivia.com</p>
-          </div>
-          <div className="">
-            <h3 className="font-bold text-lg sm:text-xl mb-2">Enlaces</h3>
-            <a href="https://titan.hostgator.mx/login/" target="_blank" rel="noopener noreferrer"
-              className="block hover:text-red-700 underline underline-offset-2 cursor-pointer">mi correo</a>
-          </div>
-        </div>
-
-        <p className="text-center font-bold p-4 text-sm">
-          Copyright &copy; 2023 &#183; Todos los Derechos Reservados &#183; Copacabana Television Srl.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

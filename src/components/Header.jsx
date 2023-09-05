@@ -11,8 +11,8 @@ function Header() {
         <div className="relative w-full h-40 md:h-36 header__container">
             <div
                 className="relative z-1 h-full container max-w-screen-xl mx-auto  p-2 flex flex-col justify-between sm:flex-row sm:items-center">
-                <Link to="/"><img src={ CtvMosca } alt="" className="logo w-32 h-20" /></Link>
-                <div className="text-white font-medium flex flex-row justify-between sm:flex-col">
+                <Link to="/"><img src={ CtvMosca } alt="" className="logo w-20 h-12 sm:w-32 sm:h-20" /></Link>
+                <div className="text-sm text-white">
                     <div>
                         <p><img src={ Location } alt="" className="inline" />C. Díaz Romero #1370, La Paz -
                             Bolivia

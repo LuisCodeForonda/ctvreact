@@ -3,12 +3,13 @@ import Facebook from '../assets/bxl-facebook-circle.svg'
 import Youtube from '../assets/bxl-youtube.svg'
 import Twitter from '../assets/bxl-twitter.svg'
 import Tiktok from '../assets/bxl-tiktok.svg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 function Navigation() {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+    const [isOpen, setIsOpen] = useState(true);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -30,20 +31,20 @@ function Navigation() {
                         className="text-center rounded-full transition hover:scale-110 duration-300"><img src={Tiktok} alt="" width={36} /></a>
                 </ul>
 
-                <ul id="menu" className={`block w-full h-56 flex flex-col justify-evenly gap-1 md:gap-4 md:w-auto md:h-auto md:block md:order-1 md:flex md:flex-row text-xl ${isOpen ? 'hidden' : 'block'}`}>
+                <ul id="menu" className={`w-full h-56 flex flex-col justify-evenly gap-1 mt-2 px-2 md:gap-4 md:mt-0 md:w-auto md:h-auto md:order-1 md:flex md:flex-row text-xl ${isOpen ? 'hidden' : ''}`}>
                     <li>
-                        <Link to="/quienessomos" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('quienessomos') ? 'text-slate-50 font-medium' : '' }}">Quienes
+                        <Link to="/quienessomos" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/quienessomos' ? 'text-white':''}`} >Quienes
                             somos
                         </Link>
                     </li>
                     <li>
-                        <Link to="/programacion" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('programacion') ? 'text-slate-50 font-medium' : '' }}">Programación</Link>
+                        <Link to="/programacion" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programacion' ? 'text-white':''}`}>Programación</Link>
                     </li>
                     <li>
-                        <Link to="/programas" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('programas') ? 'text-slate-50 font-medium' : '' }}">Programas</Link>
+                        <Link to="/programas" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programas' ? 'text-white':''}`}>Programas</Link>
                     </li>
                     <li>
-                        <Link to="/contactos" className="menu_item text-slate-400 hover:text-slate-50 block {{ request()->routeIs('contactos') ? 'text-slate-50 font-medium' : '' }}">Contactos</Link>
+                        <Link to="/contactos" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/contactos' ? 'text-white':''}`}>Contactos</Link>
 
                     </li>
                 </ul>

@@ -54,9 +54,12 @@ const data2 = [
 function List(){
   return (
     <div>
-      <h3 class="py-4 font-medium">Lunes-Viernes</h3>
+      <h3 className="py-4 font-medium">Lunes-Viernes</h3>
       {data.map((item, index) => (
-        <ItemProgramacion hora={item.hora} nombre={item.title} i={index} />
+        <div key={index}>
+          <ItemProgramacion hora={item.hora} nombre={item.title} />
+        </div>
+        
       ))}
     </div>
   );
@@ -65,9 +68,12 @@ function List(){
 function List2(){
   return (
     <div>
-      <h3 class="py-4 font-medium">Sabados</h3>
+      <h3 className="py-4 font-medium">Sabados</h3>
       {data2.map((item, index) => (
-        <ItemProgramacion hora={item.hora} nombre={item.title} i={index} />
+        <div key={index}>
+          <ItemProgramacion hora={item.hora} nombre={item.title} />
+        </div>
+        
       ))}
     </div>
   );
@@ -79,7 +85,7 @@ function TabComponent() {
   const tabs = [
     { label: 'Lunes a Viernes', content: <List/> },
     { label: 'Sabados', content: <List2 /> },
-    { label: 'Domingos', content: 'Contenido de la pestaña 3' },
+    { label: 'Domingos', content: 'Contenido' },
   ];
 
   return (
