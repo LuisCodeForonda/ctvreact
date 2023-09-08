@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import {} from 'react-'
 import Header from './Header';
 import Navigation from "./Navigation";
 import Miniatura from './Miniatura';
@@ -9,20 +8,7 @@ import Footer from './Footer';
 import dxtvlogo from './../assets/DxtvLogo.jpg'
 import protalogo from './../assets/ProtaLogo.jpg'
 
-//logos 
-import Facebook from '../assets/bxl-facebook-black.svg'
-import Youtube from '../assets/bxl-youtube-black.svg'
-import Twitter from '../assets/bxl-twitter-black.svg'
-import Tiktok from '../assets/bxl-tiktok-black.svg'
-
-//titulos
-
-
 function Layout({ children }) {
-
-  useEffect(() => {
-    document.title = 'CTV Bolivia';
-  }, []);
 
   return (
     <div>

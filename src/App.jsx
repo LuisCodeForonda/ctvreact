@@ -1,4 +1,3 @@
-import Counter from "./components/Counter"
 import Index from "./components/Index"
 import QuienesSomos from "./components/QuienesSomos"
 import Programacion from "./components/Programacion"

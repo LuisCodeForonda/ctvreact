@@ -1,3 +1,10 @@
+//logos 
+import Facebook from '../assets/bxl-facebook-black.svg'
+import Youtube from '../assets/bxl-youtube-black.svg'
+import Twitter from '../assets/bxl-twitter-black.svg'
+import Tiktok from '../assets/bxl-tiktok-black.svg'
+
+
 function Footer(){
     return(
         <footer className="bg-slate-200 text-gray-900">
