@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ItemProgramacion from './ItemProgramacion';
 
 const data = [
@@ -52,6 +52,7 @@ const data2 = [
 ]
 
 function List(){
+
   return (
     <div>
       <h3 className="py-4 font-medium">Lunes-Viernes</h3>
@@ -79,13 +80,41 @@ function List2(){
   );
 }
 
+function List3(){
+
+  const [registros, setRegistros] = useState([]);
+
+  useEffect(() => {
+    // Realiza la solicitud fetch al endpoint de tu API
+    fetch('http://localhost:8000/api/v1/programacion')
+      .then((response) => response.json())
+      .then((data) => {
+        setRegistros(data);
+      })
+      .catch((error) => {
+        console.error('Error al obtener los registros:', error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h3 className="py-4 font-medium">Sabados</h3>
+      {registros.map((item, index) => (
+        <div key={index}>
+          <ItemProgramacion hora={item.hora} nombre={item.titulo} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function TabComponent() {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
     { label: 'Lunes a Viernes', content: <List/> },
     { label: 'Sabados', content: <List2 /> },
-    { label: 'Domingos', content: 'Contenido' },
+    { label: 'Domingos', content: <List3 />},
   ];
 
   return (

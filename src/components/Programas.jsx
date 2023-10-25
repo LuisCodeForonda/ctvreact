@@ -5,28 +5,30 @@ import CardPrograma from "./CardPrograma";
 import Revista from '../assets/revista.jpg';
 import Dxtv from '../assets/dxtvtarde.jpg';
 import Rebobinando from '../assets/rebobinando.jpg';
+import Protagonistas from '../assets/protagonistas.jpg';
 
 
-function ProgramasContainer(){
-    return(
+function ProgramasContainer() {
+    return (
         <div className="grid grid-cols-1 sm:grid-cols-2">
-            <CardPrograma img={Revista} title="Revista Muy Buenos Dias" horario="de lunes a viernes 7:00am" description=""/>
+            <CardPrograma img={Revista} title="Revista Muy Buenos Dias" horario="de lunes a viernes 7:00am" description="" />
         </div>
     );
 }
 
-function ProgramasContainer2(){
-    return(
+function ProgramasContainer2() {
+    return (
         <div className="grid grid-cols-1 sm:grid-cols-2">
-            <CardPrograma img={Dxtv} title="DXTV" horario="de lunes a viernes 12:00pm" description=""/>
+            <CardPrograma img={Dxtv} title="DXTV" horario="de lunes a viernes 12:00pm" description="" />
         </div>
     );
 }
 
-function ProgramasContainer3(){
-    return(
+function ProgramasContainer3() {
+    return (
         <div className="grid grid-cols-1 sm:grid-cols-2">
-            <CardPrograma img={Rebobinando} title="Rebobinando la Historia" horario="domingos 12:00pm" description=""/>
+            <CardPrograma img={Protagonistas} title="Protagonistas" horario="De lunes a viernes 13:30pm" description="" />
+            <CardPrograma img={Rebobinando} title="Rebobinando la Historia" horario="domingos 12:00pm" description="" />
         </div>
     );
 }
