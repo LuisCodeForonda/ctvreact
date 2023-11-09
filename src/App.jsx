@@ -1,26 +1,79 @@
-import Index from "./components/Index"
-import QuienesSomos from "./components/QuienesSomos"
-import Programacion from "./components/Programacion"
-import Programas from "./components/Programas"
-import Contactos from "./components/Contactos"
-import Correos from "./components/Correos"
-import Noticia from "./components/Noticia"
+import Header from "./components/Header"
+import Navigation from "./components/Navigation"
+import Home from "./routes/Home"
+import Programacion from "./routes/Programacion"
+import Programas from "./routes/Programas"
+import Contactos from "./routes/Contactos"
+import Correos from "./routes/Correos"
+import Noticia from "./routes/Noticia"
+import QuienesSomos from "./routes/QuienesSomos"
+import Counter from "./components/Counter"
+import Miniatura from "./components/Miniatura"
+import dxtvlogo from './assets/DxtvLogo.jpg'
+import protalogo from './assets/ProtaLogo.jpg'
+import Footer from "./components/Footer"
+import ErrorPage from "./routes/error-page"
 
 import { Routes, Route } from "react-router-dom"
+import { useState } from "react"
 
 function App() {
 
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const hiddenMenu = () => {
+    if(!isOpen){
+      setIsOpen(!isOpen);
+    }
+  }
+
   return (
     <>
-       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/noticias" Component={<Noticia />} />
-        <Route path="/quienessomos" element={<QuienesSomos />} />
-        <Route path="/programacion" element={<Programacion />} />
-        <Route path="/programas" element={<Programas />} />
-        <Route path="/contactos" element={<Contactos />} />
-        <Route path="/correos" element={<Correos />} />
-      </Routes> 
+      <Header hiddenMenu={hiddenMenu} isOpen={isOpen}/>
+      <Navigation toggleMenu={toggleMenu} isOpen={isOpen} />
+
+      <main className="container max-w-screen-xl mx-auto my-6 lg:flex lg:flex-row">
+
+        <div className="m-4 lg:basis-4/6">
+
+          <div id="content" className="">
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/noticias/:slug" element={<Noticia />} />
+              <Route path="/quienes-somos" element={<QuienesSomos />} />
+              <Route path="/programacion" element={<Programacion />} />
+              <Route path="/programas" element={<Programas />} />
+              <Route path="/contactos" element={<Contactos />} />
+              <Route path="/correos" element={<Correos />} />
+              <Route path="*" element={<div>Error 404.</div>} />
+            </Routes>
+
+          </div>
+
+        </div>
+
+        <div className="lg:basis-2/6">
+          <div className=" bg-gray-200 shadow-xl lg:m-4">
+            <h2 className="inline-block text-xl bg-red-700 text-white px-4 rounded"><i
+              className="fa-solid fa-circle-play mr-2"></i>Live</h2>
+            <Counter />
+          </div>
+
+          <div className="flex flex-col gap-2 m-4 p-4 shadow-xl rounded-xl overflow-hidden">
+            <Miniatura url={dxtvlogo} />
+            <Miniatura url={protalogo} />
+          </div>
+        </div>
+
+      </main>
+
+      {/* Puedes incluir el pie de página u otros elementos comunes aquí */}
+      <Footer />
     </>
   )
 }

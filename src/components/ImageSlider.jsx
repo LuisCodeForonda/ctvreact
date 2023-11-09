@@ -44,7 +44,7 @@ function ImageSlider(){
     
   
     return (
-      <div className="relative">
+      <div className="relative rounded-lg overflow-hidden">
         <button onClick={prevImage} className="absolute top-2/4 bg-gray-200/75 rounded-r-lg px-1 cursor-pointer"><img src={ Left } alt="" width={36} /></button>
         <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
         <button onClick={nextImage} className="absolute right-0 top-2/4 bg-gray-200/75 rounded-l-lg px-1 cursor-pointer"><img src={ Right } alt=""width={36}  /></button>

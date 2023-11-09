@@ -119,7 +119,7 @@ function TabComponent() {
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold p-4">Programación</h2>
+      <h2 className="text-2xl font-bold pb-4">Programación</h2>
       <div className="border-b border-gray-200">
         <div className="flex flex-row gap-1 font-medium text-white">
           {tabs.map((tab, index) => (

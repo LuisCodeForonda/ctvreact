@@ -6,14 +6,14 @@ import Tiktok from '../assets/bxl-tiktok.svg'
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
-function Navigation() {
+function Navigation({ toggleMenu, isOpen }) {
 
     const location = useLocation();
-    const [isOpen, setIsOpen] = useState(true);
+    // const [isOpen, setIsOpen] = useState(true);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen);
+    // };
 
     return (
         <nav className="bg-gray-900 relative text-white text-2xl py-4 px-2">
@@ -33,18 +33,18 @@ function Navigation() {
 
                 <ul id="menu" className={`w-full h-56 flex flex-col justify-evenly gap-1 mt-2 px-2 md:gap-4 md:mt-0 md:w-auto md:h-auto md:order-1 md:flex md:flex-row text-xl ${isOpen ? 'hidden' : ''}`}>
                     <li>
-                        <Link to="/quienessomos" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/quienessomos' ? 'text-white':''}`} >Quienes
+                        <Link to="/quienes-somos" onClick={toggleMenu} className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/quienes-somos' ? 'text-white':''}`} >Quienes
                             somos
                         </Link>
                     </li>
                     <li>
-                        <Link to="/programacion" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programacion' ? 'text-white':''}`}>Programación</Link>
+                        <Link to="/programacion" onClick={toggleMenu} className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programacion' ? 'text-white':''}`}>Programación</Link>
                     </li>
                     <li>
-                        <Link to="/programas" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programas' ? 'text-white':''}`}>Programas</Link>
+                        <Link to="/programas" onClick={toggleMenu} className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/programas' ? 'text-white':''}`}>Programas</Link>
                     </li>
                     <li>
-                        <Link to="/contactos" className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/contactos' ? 'text-white':''}`}>Contactos</Link>
+                        <Link to="/contactos" onClick={toggleMenu} className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/contactos' ? 'text-white':''}`}>Contactos</Link>
 
                     </li>
                 </ul>
