@@ -4,16 +4,10 @@ import Youtube from '../assets/bxl-youtube.svg'
 import Twitter from '../assets/bxl-twitter.svg'
 import Tiktok from '../assets/bxl-tiktok.svg'
 import { Link, useLocation } from 'react-router-dom'
-import { useState } from 'react'
 
 function Navigation({ toggleMenu, isOpen }) {
 
     const location = useLocation();
-    // const [isOpen, setIsOpen] = useState(true);
-
-    // const toggleMenu = () => {
-    //     setIsOpen(!isOpen);
-    // };
 
     return (
         <nav className="bg-gray-900 relative text-white text-2xl py-4 px-2">
@@ -45,10 +39,8 @@ function Navigation({ toggleMenu, isOpen }) {
                     </li>
                     <li>
                         <Link to="/contactos" onClick={toggleMenu} className={`block text-slate-400 hover:text-slate-50 transition duration-300 py-2 ${location.pathname === '/contactos' ? 'text-white':''}`}>Contactos</Link>
-
                     </li>
                 </ul>
-
             </div>
         </nav>
     );

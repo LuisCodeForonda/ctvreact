@@ -6,6 +6,7 @@ import Revista from '../assets/revista.jpg';
 import Dxtv from '../assets/dxtvtarde.jpg';
 import Rebobinando from '../assets/rebobinando.jpg';
 import Protagonistas from '../assets/protagonistas.jpg';
+import PrimeraFila from '../assets/primeraFilaPrograma.jpg';
 
 
 function ProgramasContainer() {
@@ -27,6 +28,8 @@ function ProgramasContainer2() {
 function ProgramasContainer3() {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2">
+            <CardPrograma img={PrimeraFila} title="Primera Fila" horario="domingos 12:00pm" description="" />
+            
             <CardPrograma img={Protagonistas} title="Protagonistas" horario="De lunes a viernes 13:30pm" description="" />
             <CardPrograma img={Rebobinando} title="Rebobinando la Historia" horario="domingos 12:00pm" description="" />
         </div>

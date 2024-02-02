@@ -45,7 +45,7 @@ function Footer(){
         </div>
 
         <p className="text-center font-bold p-4 text-sm">
-          Copyright &copy; 2023 &#183; Todos los Derechos Reservados &#183; Copacabana Television Srl.
+          Copyright &copy; 2024 &#183; Todos los Derechos Reservados &#183; Copacabana Television Srl.
         </p>
       </footer>
     );

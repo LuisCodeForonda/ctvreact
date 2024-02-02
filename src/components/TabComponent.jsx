@@ -3,53 +3,75 @@ import ItemProgramacion from './ItemProgramacion';
 
 const data = [
   {hora: "05:55", title: "APERTURA DE EMISIÓN"},
+  {hora: "06:00", title: "PROGRAMA ARQUIDIOSESIS DE LA PAZ"},
   {hora: "06:30", title: "MISA"},
   {hora: "07:00", title: "REVISTA BUENOS DÍAS EN VIVO"},
-  {hora: "09:00", title: "SERIE TRANSFORMERS"},
-  {hora: "10:00", title: "CAPITAN CENTELLA"},
-  {hora: "10:30", title: "EL BOSQUE DE TALLAC JACKIE Y NUCA"},
-  {hora: "11:00", title: "SERIE DEFENSORES DE LA TIERRA"},
-  {hora: "11:30", title: "SERIE MACGYVER"},
-  {hora: "12:00", title: "DXTV"},
+  {hora: "08:50", title: "LA PEQUEÑA LULU"},
+  {hora: "09:00", title: "TRANSFORMERS"},
+  {hora: "09:30", title: "HE MAN Y LOS AMOS DEL UNIVERSO"},
+  {hora: "10:00", title: "SLAM DUNK - BASQUET"},
+  {hora: "10:30", title: "DEFENSORES DE LA TIERRA"},
+  {hora: "11:00", title: "MAC GYBER"},
+  {hora: "12:00", title: "DXTV EN VIVO"},
   {hora: "12:30", title: "CTV NOTICIAS MERIDIANO EN VIVO"},
   {hora: "13:30", title: "PROTAGONISTAS EN VIVO"},
-  {hora: "15:00", title: "SERIE BREVE STARR"},
-  {hora: "15:30", title: "SERIE MARCO"},
-  {hora: "16:00", title: "SERIE FABULAS DE VERDE BOSQUE"},
-  {hora: "16:30", title: "SERIE QUIEN MANDA A QUIEN"},
+  {hora: "15:00", title: "ROBIN HOOD"},
+  {hora: "15:30", title: "EL PRINCIPE VALIENTE"},
+  {hora: "16:00", title: "HALCONES GALACTICOS"},
+  {hora: "16:30", title: "¿QUIEN MANDA A QUIEN?"},
   {hora: "17:00", title: "MUSICA"},
-  {hora: "18:00", title: "SERIE HOMBRE NUCLEAR"},
-  {hora: "19:00", title: "SERIE COLUMBO"},
+  {hora: "18:00", title: "LA ISLA DE LA FANTASIA"},
+  {hora: "19:00", title: "KOJAK"},
   {hora: "20:00", title: "CTV NOTICIAS CENTRAL EN VIVO"},
-  {hora: "21:00", title: "SERIE COMBATE"},
-  {hora: "22:00", title: "SERIE DORAMA"},
+  {hora: "21:00", title: "LOS AÑOS MARAVILLOSOS"},
+  {hora: "22:00", title: "DORAMA \"MI ADORABLE SECRETARIA\""},
   {hora: "23:00", title: "DXTV EN VIVO"},
 ]
 
 const data2 = [
-  {hora: "06:00", title: "MISA"},
-  {hora: "07:00", title: "BRAVESTARR"},
-  {hora: "07:30", title: "CONDE PATULA"},
-  {hora: "08:00", title: "HAMTARO"},
-  {hora: "08:30", title: "CHIP Y DALE"},
-  {hora: "09:00", title: "LOS CAZAFANTASMAS NUEVA GENERACIÓN"},
+  {hora: "05:55", title: "APERTURA DE EMISIÓN"},
+  {hora: "06:00", title: "AUTOPISTA HACIA EL CIELO"},
+  {hora: "07:00", title: "REBOBINANDO LA HISTORIA REPRIS"},
+  {hora: "09:00", title: "LOS CAZAFANTASMAS LOS REALES"},
   {hora: "09:30", title: "HEATHCLIFF"},
   {hora: "10:00", title: "TRANSFORMERS"},
-  {hora: "11:00", title: "HE - MAN MASTERS"},
+  {hora: "11:00", title: "HE - MAN Y LOS AMOS DEL UNIVERSO"},
   {hora: "11:30", title: "SHE- RA PRINCESA DEL PODER"},
   {hora: "12:00", title: "RAMBO"},
-  {hora: "13:00", title: "ROBOTECH"},
-  {hora: "13:30", title: "G.I. JOE"},
-  {hora: "14:30", title: "SERIE FABULAS DE VERDE BOSQUE"},
-  {hora: "15:30", title: "CINE ANIME PELICULA"},
+  {hora: "13:00", title: "ROBOTECH LA NUEVA GENERACIÓN"},
+  {hora: "13:30", title: "DEFENSORES DE LA TIERRA"},
+  {hora: "14:30", title: "GIJOE"},
+  {hora: "15:30", title: "DORAEMON"},
   {hora: "17:00", title: "KUNG FU"},
   {hora: "18:00", title: "EL AUTO FANTASTICO"},
-  {hora: "19:00", title: "SUPER AGENTE 86"},
+  {hora: "19:00", title: "PRIMERA FILA"},
   {hora: "20:00", title: "LOS MAGNIFICOS"},
   {hora: "21:00", title: "MACGYVER"},
   {hora: "22:00", title: "MIAMI VICE"},
   {hora: "23:00", title: "LOBO DEL AIRE"},
 ]
+
+const data3 = [
+  {hora: "06:00", title: "AUTOPISTA HACIA EL CIELO"},
+  {hora: "07:00", title: "INVASION EXTRATERRESTRE"},
+  {hora: "08:00", title: "SUPER LIBRO"},
+  {hora: "08:30", title: "LAS AVENTURAS DE LOS OSOS GUMMI"},
+  {hora: "09:00", title: "AVENTUREROS DEL AIRE"},
+  {hora: "09:30", title: "TRANSFORMERS"},
+  {hora: "10:30", title: "SANTA MISA CELEBRACION DE LA EUCARISTIA"},
+  {hora: "11:30", title: "EL PAJARO LOCO"},
+  {hora: "12:00", title: "REBOBINANDO LA HISTORIA"},
+  {hora: "14:00", title: "PRIMERA FILA"},
+  {hora: "15:00", title: "LOS ARISTOGATOS"},
+  {hora: "16:30", title: "ALF"},
+  {hora: "17:00", title: "LA BELLA Y LA BESTIA"},
+  {hora: "18:00", title: "EL DIARIO DEL DESTINO"},
+  {hora: "19:00", title: "WALKER TEXAS"},
+  {hora: "20:00", title: "LOS MAGNIFICOS"},
+  {hora: "21:00", title: "EL INCREIBLE HULK"},
+  {hora: "22:00", title: "DXTV EN VIVO"},
+]
+
 
 function List(){
 
@@ -69,7 +91,7 @@ function List(){
 function List2(){
   return (
     <div>
-      <h3 className="py-4 font-medium">Sabados</h3>
+      <h3 className="py-4 font-medium">Sábados</h3>
       {data2.map((item, index) => (
         <div key={index}>
           <ItemProgramacion hora={item.hora} nombre={item.title} />
@@ -82,27 +104,14 @@ function List2(){
 
 function List3(){
 
-  const [registros, setRegistros] = useState([]);
-
-  useEffect(() => {
-    // Realiza la solicitud fetch al endpoint de tu API
-    fetch('http://localhost:8000/api/v1/programacion')
-      .then((response) => response.json())
-      .then((data) => {
-        setRegistros(data);
-      })
-      .catch((error) => {
-        console.error('Error al obtener los registros:', error);
-      });
-  }, []);
-
   return (
     <div>
-      <h3 className="py-4 font-medium">Sabados</h3>
-      {registros.map((item, index) => (
+      <h3 className="py-4 font-medium">Domingos</h3>
+      {data3.map((item, index) => (
         <div key={index}>
-          <ItemProgramacion hora={item.hora} nombre={item.titulo} />
+          <ItemProgramacion hora={item.hora} nombre={item.title} />
         </div>
+        
       ))}
     </div>
   );
@@ -113,7 +122,7 @@ function TabComponent() {
 
   const tabs = [
     { label: 'Lunes a Viernes', content: <List/> },
-    { label: 'Sabados', content: <List2 /> },
+    { label: 'Sábados', content: <List2 /> },
     { label: 'Domingos', content: <List3 />},
   ];
 

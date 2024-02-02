@@ -6,15 +6,16 @@ import ctvnoticias from './../assets/ctvnoticias.jpg';
 import protagonistas from './../assets/protagonistas.jpg';
 import noticias2 from './../assets/noticias2.jpg';
 import dorama from './../assets/dorama.jpg';
+import primerafila from './../assets/primeraFila.jpg';
 
 import Left from '../assets/bxs-left-arrow.svg'
 import Right from '../assets/bxs-right-arrow.svg'
 
 const images = [
-    revista,
-    rebobinando,
-    dxtvtarde,
     ctvnoticias,
+    rebobinando,
+    primerafila,
+    dxtvtarde,
     protagonistas,
     noticias2,
     dorama,

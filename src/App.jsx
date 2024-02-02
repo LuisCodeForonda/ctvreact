@@ -13,6 +13,7 @@ import dxtvlogo from './assets/DxtvLogo.jpg'
 import protalogo from './assets/ProtaLogo.jpg'
 import Footer from "./components/Footer"
 import ErrorPage from "./routes/error-page"
+import Station from './assets/bx-station.svg'
 
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Header hiddenMenu={hiddenMenu} isOpen={isOpen}/>
+      <Header hiddenMenu={hiddenMenu} />
       <Navigation toggleMenu={toggleMenu} isOpen={isOpen} />
 
       <main className="container max-w-screen-xl mx-auto my-6 lg:flex lg:flex-row">
@@ -50,7 +51,7 @@ function App() {
               <Route path="/programas" element={<Programas />} />
               <Route path="/contactos" element={<Contactos />} />
               <Route path="/correos" element={<Correos />} />
-              <Route path="*" element={<div>Error 404.</div>} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
 
           </div>
@@ -58,9 +59,9 @@ function App() {
         </div>
 
         <div className="lg:basis-2/6">
-          <div className=" bg-gray-200 shadow-xl lg:m-4">
-            <h2 className="inline-block text-xl bg-red-700 text-white px-4 rounded"><i
-              className="fa-solid fa-circle-play mr-2"></i>Live</h2>
+          <div className="shadow-xl lg:m-4">
+            <h2 className="inline-block text-xl bg-red-700 text-white px-4 rounded">
+              <img src={Station} alt="" className="inline pr-2" />Live</h2>
             <Counter />
           </div>
 
@@ -71,8 +72,6 @@ function App() {
         </div>
 
       </main>
-
-      {/* Puedes incluir el pie de página u otros elementos comunes aquí */}
       <Footer />
     </>
   )

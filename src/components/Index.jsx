@@ -20,7 +20,7 @@ function Index() {
             console.error('Error al obtener los registros:', error);
         });
         setTitle('CTV Bolivia')
-        setDescription('Sintoniza nuestro canal de televisi贸n en Bolivia y disfruta de la mejor programaci贸n. Desde noticias y deportes hasta entretenimiento y series de televisi贸n.')
+        setDescription('Sintoniza nuestro canal de televisión en Bolivia y disfruta de la mejor programación. Desde noticias y deportes hasta entretenimiento y series de televisión.')
     },[]);
 
     return (

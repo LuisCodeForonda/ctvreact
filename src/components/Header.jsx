@@ -6,7 +6,7 @@ import Phone from '../assets/bxs-phone.svg'
 import Whatsapp from '../assets/bxl-whatsapp.svg'
 
 
-function Header({ hiddenMenu, isOpen }) {
+function Header({ hiddenMenu }) {
     return (
         <div className="relative w-full h-40 md:h-36 header__container">
             <div
